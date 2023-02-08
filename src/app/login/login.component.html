@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td>Usuário</td>
+        <td><input type="text" [( ngModel )]="usuario" /></td>
+    </tr>
+    <tr>
+        <td>Senha:</td>
+        <td><input type="password" [( ngModel )]="senha" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <hr/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="onLogin()">Entrar</button>
+        </td>
+    </tr>
+</table>
+<p>{{ mensagemErro }}</p>

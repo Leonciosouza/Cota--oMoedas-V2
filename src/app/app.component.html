@@ -1,0 +1,53 @@
+<div class="conteudo_pagina">
+  
+  <div class="header">
+    <h1> Consulta de Taxa de Cambio </h1>
+  </div>
+  
+  <br>
+   <div class="tabela_moedas">
+      <table>
+        <tr>
+          <td>Moeda:</td>
+            <div class="consulta">
+              <td *ngIf="ehDolar and !ehEuro">{{ dados.USDBRL.name }}</td>
+              <td *ngIf="ehEuro and !ehDolar">{{ dados.EURBRL.name }}</td>
+              <td *ngIf="!ehDolar and !ehEuro">{{ dados.CADBRL.name }}</td>
+            </div>
+        </tr>
+        <tr>
+          <td>Valor:</td>
+            <div class="consulta">
+              <td *ngIf="ehDolar and !ehEuro">R$ {{ dados.USDBRL.high }}</td>
+              <td *ngIf="ehEuro  and !ehDolar">R$ {{ dados.EURBRL.high }}</td>
+              <td *ngIf="!ehDolar and !ehEuro">R$ {{ dados.CADBRL.high }}</td>
+            </div>
+        </tr>
+        <tr>
+          <td>Data:</td>
+            <div class="consulta">
+              <td *ngIf="ehDolar and !ehEuro">{{ dados.USDBRL.create_date }}</td>
+              <td *ngIf="ehEuro and !ehDolar">{{ dados.EURBRL.create_date }}</td>
+              <td *ngIf="!ehDolar and !ehEuro">{{ dados.CADBRL.create_date }}</td>
+            </div>
+        </tr>
+        <tr>
+            <td>Data atualizada:</td>
+              <div class="consulta">  
+                <td *ngIf="ehDolar and !ehEuro">{{ dataAtualizada | date: "dd/MM/yyyy" }}</td>
+                <td *ngIf="ehEuro and !ehDolar">{{ dataAtualizada | date: "dd/MM/yyyy" }}</td>
+                <td *ngIf="!ehDolar and !ehEuro">{{ dataAtualizada | date: "dd/MM/yyyy" }}</td>
+              </div>
+        </tr>
+      </table>
+   </div> 
+  
+  
+  <div class="buttons">
+    <button (click)="pesquisar('USD')">Pesquisar Dólar</button>&nbsp;
+    <button (click)="pesquisar('EUR')">Pesquisar Euro</button>&nbsp;
+    <button (click)="pesquisar('CAD')">Pesquisar CAD</button>
+  </div>
+  <router-outlet></router-outlet>
+
+</div>

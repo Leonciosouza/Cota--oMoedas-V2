@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <td>Moeda </td> |
+        <td>Moeda</td> |
+        <td>Nome</td> |
+        <td>Cotacao Maxima</td> |
+        <td>Cotacao Minima</td> |
+        <td>Data/Hora da Cotação</td> |
+    </tr>
+    <tr *ngFor=" let cotacao of cotacoes">
+        <td>{{cotacao.code}} </td>
+        <td>{{cotacao.codein}}</td>
+        <td>{{cotacao.name}}</td>
+        <td>{{cotacao.high}}</td>
+        <td>{{cotacao.low}}</td>
+        <td>{{cotacao.create_date}}</td>
+    </tr>
+</table>

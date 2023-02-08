@@ -1,0 +1,42 @@
+
+.header{
+    font-family: 'Jovanny Lemonad', sans-serif;
+    background-color: rgb(144, 12, 12);
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 1.5rem;
+    border-radius: 25px ;
+    font-size: 25px;
+
+}
+.tabela_moedas{
+    font-family:Andale Mono, monospace;
+    font-size: 30px;
+    margin-left: 18%;
+    margin-bottom: 25px;   
+}
+
+.consulta{
+    margin-left: 7rem;
+    font-style: italic;
+    font-size: 25px;
+}
+.buttons{
+    text-align: center;
+    margin: 4rem;
+}
+button{
+    border-radius: 4px;
+    background-color: #01924a;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    margin: 1%;
+}
